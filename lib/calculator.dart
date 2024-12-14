@@ -1,3 +1,5 @@
+import 'package:dart_calculator/errors/division_by_zero_error.dart';
+
 class Calculator {
   double additionOperation(double firstOperand, double secondOperand) {
     return firstOperand + secondOperand;
@@ -12,6 +14,10 @@ class Calculator {
   }
 
   double divisionOperation(double firstOperand, double secondOperand) {
+    if (secondOperand == 0) {
+      throw DivisionByZeroError();
+    }
+
     return firstOperand / secondOperand;
   }
 }
