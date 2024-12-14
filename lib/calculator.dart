@@ -4,6 +4,6 @@ class Calculator {
   }
 
   double subtractionOperation(double firstOperand, double secondOperand) {
-    throw UnimplementedError();
+    return firstOperand - secondOperand;
   }
 }
