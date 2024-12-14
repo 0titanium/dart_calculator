@@ -1,10 +1,10 @@
+import 'package:dart_calculator/core/operations/multiplication_operation.dart';
 import 'package:test/test.dart';
-import 'package:dart_calculator/calculator.dart';
 
 void main() {
   test(('곱셈 연산 2 * 3은 6을 리턴'), () {
-    final calculator = Calculator();
+    final multiplicationOperation = MultiplicationOperation();
 
-    expect(calculator.multiplicationOperation(2, 3), 6);
+    expect(multiplicationOperation.execute(2, 3), 6);
   });
 }
