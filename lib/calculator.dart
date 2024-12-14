@@ -8,6 +8,6 @@ class Calculator {
   }
 
   double multiplicationOperation(double firstOperand, double secondOperand) {
-    throw UnimplementedError();
+    return firstOperand * secondOperand;
   }
 }
