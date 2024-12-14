@@ -10,4 +10,8 @@ class Calculator {
   double multiplicationOperation(double firstOperand, double secondOperand) {
     return firstOperand * secondOperand;
   }
+
+  double divisionOperation(double firstOperand, double secondOperand) {
+    throw UnimplementedError();
+  }
 }
