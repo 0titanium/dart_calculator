@@ -1,23 +1,21 @@
-import 'package:dart_calculator/core/errors/division_by_zero_error.dart';
+import 'package:dart_calculator/core/exceptions/calculator_exceptions.dart';
+import 'package:dart_calculator/core/interfaces/calculator_interface.dart';
+import 'package:dart_calculator/core/interfaces/operation.dart';
 
-class Calculator {
-  double additionOperation(double firstOperand, double secondOperand) {
-    return firstOperand + secondOperand;
-  }
+class Calculator implements CalculatorInterface {
+  final Map<String, Operation> _operations;
 
-  double subtractionOperation(double firstOperand, double secondOperand) {
-    return firstOperand - secondOperand;
-  }
+  Calculator(this._operations);
 
-  double multiplicationOperation(double firstOperand, double secondOperand) {
-    return firstOperand * secondOperand;
-  }
-
-  double divisionOperation(double firstOperand, double secondOperand) {
-    if (secondOperand == 0) {
-      throw DivisionByZeroError();
+  @override
+  double calculate(
+    double a,
+    double b,
+    String operation,
+  ) {
+    if (!_operations.containsKey(operation)) {
+      throw InvalidOperationException('Unsupported operation: $operation');
     }
-
-    return firstOperand / secondOperand;
+    return _operations[operation]!.execute(a, b);
   }
 }
