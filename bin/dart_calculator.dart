@@ -1,4 +1,4 @@
-import 'package:dart_calculator/dart_calculator.dart' as dart_calculator;
+import 'package:dart_calculator/calculator.dart' as dart_calculator;
 
 void main(List<String> arguments) {
 
