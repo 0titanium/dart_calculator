@@ -1,4 +1,4 @@
-import 'package:dart_calculator/errors/division_by_zero_error.dart';
+import 'package:dart_calculator/core/errors/division_by_zero_error.dart';
 
 class Calculator {
   double additionOperation(double firstOperand, double secondOperand) {
